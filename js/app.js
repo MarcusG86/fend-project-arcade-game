@@ -28,6 +28,7 @@ Enemy.prototype.update = function(dt) {
   this.checkCollision();
 };
 
+// Check for player collision
 Enemy.prototype.checkCollision = function() {
   if (
     player.y + 131 >= this.y + 90 && player.x + 25 <= this.x + 88 && player.y + 73 <= this.y + 135 &&
@@ -36,7 +37,6 @@ Enemy.prototype.checkCollision = function() {
     player.y = YPOS;
   }
 };
-
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
